@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+
+        <h2 class="text-6xl text-center font-extrabold my-16">Hunting phone</h2>
+    </header>
+    <main>
+        <!-- search section -->
+        <section class="flex bg-slate-800 my-6 p-4 ">
+            <div>
+                <input id="search-Filed" type="text" placeholder="Search" class=" input input-bordered " />
+                <button onclick="handleSearch()" class="btn btn-success">Search</button>
+                
+           
+            <!-- another search button -->
+           
+                <input id="search-Filed2" type="text" placeholder="Search" class=" ml-48 input input-bordered  " />
+                <button onclick="handleSearch2()" class="btn btn-primary">Search</button>
+            </div>
+        </section>
+
+        <!-- searched phone section -->
+        <section>
+
+            <!-- add spinner or loading -->
+            <div id="loader" class="text-center h-28 hidden">
+                <span class="loading loading-bars loading-lg text-primary"></span>
+            </div>
+          
+            <!-- phone container -->
+            <div id="phone-container" class="max-w-[1140px] mx-auto px-10 grid grid-cols-1 gap-10  md:grid-cols-2 lg:grid-cols-3">
+            </div>
+
+            <!-- show all button -->
+        <div id="show-all-btn" class="my-8 text-center hidden">
+            <button onclick="handleShowAll()" class="btn btn-primary">Show All</button>
+        </div>
+
+        </section>
+
+<!-- modal -->
+<!-- You can open the modal using ID.showModal() method -->
+<button class="btn" onclick="phone_detail_modal.showModal()">open modal</button>
+<dialog id="phone_detail_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <footer></footer>
+
+    <!-- scripts -->
+    <script src="js/index.js"></script>
+</body>
+</html>

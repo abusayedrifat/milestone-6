@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <button onclick='loadData()' class="btn">click me</button>
+    <button onclick="loadData2()" class="btn">click me too</button>
+    <button onclick="userData()" class="btn">User data</button>
+    <button onclick="loadUsers2()" id="load-user" class="btn">load users 2</button>
+
+    <button onclick="creatAPost()" class="btn">creat a post</button>
+<button onclick="patchAPost()" class="btn">Patch a post</button>
+<button onclick="deletePost()" class="btn">delete a post</button>
+    <div id="list-container" class="ml-12 mt-10">
+        <ul id="users-list">
+           
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- scripts -->
+    <script src="/js file/tailwind.config.js"></script>
+    <script src="/js file/app.js"></script>
+    <script src="/js file/fetch.js"></script>
+    <script src="/js file/index.js"></script>
+    <script src="/js file/posts.js"></script>
+</body>
+</html>
